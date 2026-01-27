@@ -7,8 +7,29 @@ class IntroPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      appBar: AppBar(title: const Text('Intro Page')),
-      body: Column(children: []),
+      body: Column(
+        children: [
+          //logo
+          Padding(
+            padding: const EdgeInsets.all(25.0),
+            child: Image.asset('assets/images/logo.png', height: 240),
+          ),
+
+          //title
+          Text(
+            'Just Do It',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+
+          //subtitle
+          Text(
+            'Brand New sneakers Just For You',
+            style: TextStyle(fontSize: 16, color: Colors.grey),
+          ),
+
+          //start now button
+        ],
+      ),
     );
   }
 }
