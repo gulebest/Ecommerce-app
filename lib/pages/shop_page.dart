@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/components/shoe_tile.dart';
+import 'package:ecommerce_app/models/shoe.dart';
 import 'package:flutter/material.dart';
 
 class ShopPage extends StatelessWidget {
@@ -60,7 +61,12 @@ class ShopPage extends StatelessWidget {
           child: ListView.builder(
             itemBuilder: (context, index) {
               //create a shoe
-              Shoe shoe = shoes(name:'Air Jordan', price: '240', imagePath: 'assets/images/air_jordan.png', description: 'cool shoe')
+              Shoe shoe = Shoe(
+                name: 'Air Jordan', 
+                price: '240', 
+                imagePath: 'assets/images/logo.png', // Using logo.png temporarily as I know it exists
+                description: 'cool shoe',
+              );
               return ShoeTile(shoe: shoe,
               );
             },
