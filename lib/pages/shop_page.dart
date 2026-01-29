@@ -59,6 +59,8 @@ class ShopPage extends StatelessWidget {
         const SizedBox(height: 10),
         Expanded(
           child: ListView.builder(
+            itemCount: 4,
+            scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
               //create a shoe
               Shoe shoe = Shoe(
@@ -71,6 +73,10 @@ class ShopPage extends StatelessWidget {
               return ShoeTile(shoe: shoe);
             },
           ),
+        ),
+        const Padding(
+          padding: EdgeInsets.only(top: 10.0, left: 25, right: 25),
+          child: Divider(color: Colors.white),
         ),
       ],
     );
