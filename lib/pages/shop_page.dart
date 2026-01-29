@@ -62,13 +62,13 @@ class ShopPage extends StatelessWidget {
             itemBuilder: (context, index) {
               //create a shoe
               Shoe shoe = Shoe(
-                name: 'Air Jordan', 
-                price: '240', 
-                imagePath: 'assets/images/logo.png', // Using logo.png temporarily as I know it exists
+                name: 'Air Jordan',
+                price: '240',
+                imagePath:
+                    'assets/images/air_jordan.png', // Using logo.png temporarily as I know it exists
                 description: 'cool shoe',
               );
-              return ShoeTile(shoe: shoe,
-              );
+              return ShoeTile(shoe: shoe);
             },
           ),
         ),
