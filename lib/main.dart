@@ -1,6 +1,8 @@
+import 'package:ecommerce_app/models/cart.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:provider/provider.dart';
 import 'pages/Intro_page.dart';
 
 void main() {
@@ -17,11 +19,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const IntroPage(),
-      builder: DevicePreview.appBuilder,
-      locale: DevicePreview.locale(context),
+    return ChangeNotifierProvider(
+      create: (context) => Cart(),
+      builder: (context, child) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: const IntroPage(),
+        builder: DevicePreview.appBuilder,
+        locale: DevicePreview.locale(context),
+      ),
     );
   }
 }
