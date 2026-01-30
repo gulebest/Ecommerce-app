@@ -21,7 +21,7 @@ class _ShopPageState extends State<ShopPage> {
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('Successfully Added'),
-        content: const Text('The shoe has been added to your cart.'),
+        content: const Text('Check your cart.'),
         actions: [
           TextButton(
             onPressed: () {

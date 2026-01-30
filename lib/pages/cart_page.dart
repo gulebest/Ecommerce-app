@@ -13,13 +13,14 @@ class CartPage extends StatelessWidget {
       builder: (context, value, child) => Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //heading
             const Text(
               'My Cart',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 20),
 
             Expanded(
               child: ListView.builder(
