@@ -12,6 +12,28 @@ class ShopPage extends StatefulWidget {
 }
 
 class _ShopPageState extends State<ShopPage> {
+  //function to add shoe to cart
+  void addShoeToCart(Shoe individualShoe) {
+    Provider.of<Cart>(context, listen: false).addToCart(individualShoe);
+
+    //alert the user,shoe successfully added
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Successfully Added'),
+        content: const Text('The shoe has been added to your cart.'),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: const Text('OK'),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Consumer<Cart>(
@@ -72,16 +94,10 @@ class _ShopPageState extends State<ShopPage> {
               itemCount: 4,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                //create a shoe
-                Shoe shoe = Shoe(
-                  name: 'Air Jordan',
-                  price: '240',
-                  imagePath:
-                      'assets/images/air_jordan.png', // Using logo.png temporarily as I know it exists
-                  description: 'cool shoe',
-                );
-                //return shoe
-                return ShoeTile(shoe: shoe);
+                //get a shoe from the list
+                Shoe shoe = value.getShoeShop()[index];
+                //return the shoe
+                return ShoeTile(shoe: shoe, onTap: () => addShoeToCart(shoe));
               },
             ),
           ),
