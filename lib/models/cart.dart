@@ -41,7 +41,7 @@ class Cart extends ChangeNotifier {
     return shoeShop;
   }
 
-  //get cart
+  //get cart items
   List<Shoe> getUserCart() {
     return userCart;
   }
