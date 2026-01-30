@@ -66,8 +66,8 @@ class ShoeTile extends StatelessWidget {
                 //plus button
                 GestureDetector(
                   onTap: onTap,
-                    //add to cart function
-                  
+
+                  //add to cart function
                   child: Container(
                     padding: const EdgeInsets.all(20),
                     decoration: const BoxDecoration(

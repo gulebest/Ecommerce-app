@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/components/bottom_nav_bar.dart';
 import 'package:ecommerce_app/pages/cart_page.dart';
 import 'package:ecommerce_app/pages/shop_page.dart';
+import 'package:ecommerce_app/pages/Intro_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -48,6 +49,11 @@ class _HomePageState extends State<HomePage> {
             );
           },
         ),
+        title: Text(
+          _selectedIndex == 0 ? 'Shop' : 'Cart',
+          style: const TextStyle(color: Colors.black),
+        ),
+        centerTitle: true,
       ),
       drawer: Drawer(
         backgroundColor: Colors.black,
@@ -63,27 +69,58 @@ class _HomePageState extends State<HomePage> {
                   child: Divider(color: Colors.grey[900]),
                 ),
                 //other pages
-                const Padding(
-                  padding: EdgeInsets.only(left: 25.0),
+                Padding(
+                  padding: const EdgeInsets.only(left: 25.0),
                   child: ListTile(
-                    leading: Icon(Icons.home, color: Colors.white),
-                    title: Text('Home', style: TextStyle(color: Colors.white)),
+                    leading: const Icon(Icons.home, color: Colors.white),
+                    title: const Text(
+                      'Home',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    onTap: () {
+                      Navigator.pop(context); // Close drawer
+                    },
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 25.0),
+                Padding(
+                  padding: const EdgeInsets.only(left: 25.0),
                   child: ListTile(
-                    leading: Icon(Icons.info, color: Colors.white),
-                    title: Text('About', style: TextStyle(color: Colors.white)),
+                    leading: const Icon(Icons.info, color: Colors.white),
+                    title: const Text(
+                      'About',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    onTap: () {
+                      Navigator.pop(context); // Close drawer
+                      showDialog(
+                        context: context,
+                        builder: (context) => const AboutDialog(
+                          applicationName: 'Nike Store',
+                          applicationVersion: '1.0.0',
+                          applicationLegalese: 'Copyright 2026 Nike Store',
+                        ),
+                      );
+                    },
                   ),
                 ),
               ],
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 25.0, bottom: 25.0),
+            Padding(
+              padding: const EdgeInsets.only(left: 25.0, bottom: 25.0),
               child: ListTile(
-                leading: Icon(Icons.logout, color: Colors.white),
-                title: Text('Logout', style: TextStyle(color: Colors.white)),
+                leading: const Icon(Icons.logout, color: Colors.white),
+                title: const Text(
+                  'Logout',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (context) => const IntroPage()),
+                    (route) => false,
+                  );
+                },
               ),
             ),
           ],
