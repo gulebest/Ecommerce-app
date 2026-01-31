@@ -20,7 +20,7 @@ class IntroPage extends StatelessWidget {
                 child: Image.asset('assets/images/logo1.png', height: 240),
               ),
 
-              //titl
+              //title
               Text(
                 'Just Do It',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
