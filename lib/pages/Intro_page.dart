@@ -26,7 +26,7 @@ class IntroPage extends StatelessWidget {
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
 
-              //subtitl
+              //subtitle
               Text(
                 'Brand New sneakers custom kicks made with premium quality',
                 style: TextStyle(fontSize: 16, color: Colors.grey),
