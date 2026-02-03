@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
   // this method will update the selected index
-  // when the users taps on the bottom navigation bar
+  // when the users taps on the bottom navigation ba
   void navigateButtonBar(int index) {
     setState(() {
       _selectedIndex = index;
