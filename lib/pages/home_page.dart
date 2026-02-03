@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
-  // this method will update the selected index
+  // this method will update the selected inde
   // when the users taps on the bottom navigation bar
   void navigateButtonBar(int index) {
     setState(() {
