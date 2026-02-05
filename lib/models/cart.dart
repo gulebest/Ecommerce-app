@@ -2,7 +2,7 @@ import 'shoe.dart';
 import 'package:flutter/foundation.dart';
 
 class Cart extends ChangeNotifier {
-  //list of shoe for sal
+  //list of shoe for sale
   List<Shoe> shoeShop = [
     Shoe(
       name: 'Air Max 270',
