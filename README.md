@@ -22,7 +22,7 @@ Clean folder structure
 
 API integration (if applicable)
 
-Local storage / cart logic
+Local storage /cart logic
 
 ✨ Features
 🏠 Home Screen
