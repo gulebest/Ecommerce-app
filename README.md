@@ -1,16 +1,76 @@
-# ecommerce_app
+🛒 Ecommerce App (Flutter)
 
-A new Flutter project.
+A modern and fully responsive E-commerce mobile application built using Flutter and Dart.
+This app provides a smooth shopping experience where users can browse products, view details, add items to cart, and manage their purchases.
 
-## Getting Started
+📱 Project Overview
 
-This project is a starting point for a Flutter application.
+The Ecommerce App is designed to simulate a real-world online shopping platform.
+It focuses on clean UI design, state management, and scalable architecture.
 
-A few resources to get you started if this is your first Flutter project:
+The application demonstrates:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Mobile UI development with Flutter
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+State management
+
+Navigation between screens
+
+Reusable components
+
+Clean folder structure
+
+API integration (if applicable)
+
+Local storage / cart logic
+
+✨ Features
+🏠 Home Screen
+
+Product listing grid
+
+Category filtering (if implemented)
+
+Search functionality (if implemented)
+
+📦 Product Details
+
+Product image
+
+Product name & description
+
+Price display
+
+Add to cart button
+
+🛒 Cart Screen
+
+View selected items
+
+Increase/decrease quantity
+
+Remove items
+
+Calculate total price
+
+👤 User Section (if implemented)
+
+Login / Register
+
+Profile screen
+
+Order history
+
+🛠️ Tech Stack
+
+Framework: Flutter
+
+Language: Dart
+
+IDE: VS Code / Android Studio
+
+State Management: (Provider / Riverpod / setState / Bloc — update this accordingly)
+
+Backend: (Firebase / REST API / Local JSON — update if applicable)
+
+Database: (Firebase Firestore / SQLite / None — update if applicable)
